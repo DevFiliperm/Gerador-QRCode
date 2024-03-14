@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.container{
+  border-radius: 5px;
+  padding: 20px;
+  height: 260px;
+  text-align: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: .1s;
+}
+
+.container.active{
+  height: auto;
+}
+
+
+#qr-header h1{
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+#qr-header p{
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+#qr-form input,
+#qr-form button{
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+#qr-form input{
+  outline: 0;
+  margin-bottom: 5px;
+  padding: 0 15px;
+  border: 1px solid #dfdcdc;
+}
+
+#qr-form button{
+  cursor: pointer;
+  font-weight: 700;
+  color: #fff;
+  background-color: #141313;
+  border: none;
+  opacity: 0.9;
+  transition: .5s;
+}
+
+#qr-form button:hover{
+  opacity: 1;
+}
+
+#qr-code{
+  border: 1px solid #e6e3e3;
+  border-radius: 5px;
+  padding: 45px 20px;
+  height: max-content;
+  margin-top: 20px;
+  opacity: 0;
+}
+
+.container.active #qr-code{
+  opacity: 1;
+}
+
+
+
+@media (max-width: 500px){
+  .container{
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 320px){
+  #qr-header h1 {
+    font-size: 25px;
+  }
+}
